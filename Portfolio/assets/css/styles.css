@@ -345,15 +345,22 @@ img {
   color: var(--body-color);
 }
 
-.about__container{
-  row-gap: 2.5rem;
+#about {
+  display:block;
+  margin:auto;
+  width:50%
+}
+.about__container {
+  display:block;
+  width:50%;
+  text-align: center;
+
 }
 
 .about__img{
   width: 220px;
   border-radius: 1.5rem;
   background-color: var(--first-color);
-  justify-self: center;
 }
 
 .about__data{
