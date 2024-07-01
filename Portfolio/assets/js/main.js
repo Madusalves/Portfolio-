@@ -11,6 +11,45 @@ const showMenu = (toggleId, navId) =>{
 }
 showMenu('nav-toggle','nav-menu')
 
+
+/* Contact */
+
+function handleFormSubmission(event) {
+  event.preventDefault(); // Prevent default form submission behavior
+
+  // Get form element references
+  const nameInput = document.getElementById('nameInput');
+  const emailInput = document.getElementById('emailInput');
+  const messageInput = document.getElementById('messageInput');
+
+  // Extract form data
+  const name = nameInput.value.trim();
+  const email = emailInput.value.trim();
+  const message = messageInput.value.trim();
+
+  // Basic form validation (optional)
+  if (name === '' || email === '' || message === '') {
+    alert('Please fill in all required fields.');
+    return; // Exit function if validation fails
+  }
+
+  // Process form data (e.g., send to server using AJAX or other methods)
+  console.log('Form submitted successfully!');
+  console.log(`Name: ${name}`);
+  console.log(`Email: ${email}`);
+  console.log(`Message: ${message}`);
+
+  // Clear form fields after successful submission (optional)
+  nameInput.value = '';
+  emailInput.value = '';
+  messageInput.value = '';
+}
+
+// Attach event listener to the submit button
+const submitButton = document.getElementById('submitButton');
+submitButton.addEventListener('click', handleFormSubmission);
+
+
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link')
 
